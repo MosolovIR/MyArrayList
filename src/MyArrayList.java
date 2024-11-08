@@ -15,11 +15,23 @@ public class MyArrayList<T> {
         elements[size++] = element;
     }
 
+    public int getSize() {
+        return elements.length;
+    }
+
     public T get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds: " + index);
         } else {
             return elements[index];
+        }
+    }
+
+    public void set(int index, T element) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+        } else {
+            elements[index] = element;
         }
     }
 
